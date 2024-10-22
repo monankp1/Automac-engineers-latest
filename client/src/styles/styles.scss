@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+input,
+select,
+td,
+tr,
+th,
+thead,
+table {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+

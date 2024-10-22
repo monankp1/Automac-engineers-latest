@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMAC Calibration Certificate</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Calibration Certificate</h1>
+        <h2>Certificate No.: {{certificate_number}}</h2>
+        <h2>Company: {{companyName}}</h2>
+        <h2>Company Address: {{companyAddress}}</h2>
+        <h2>Instrument Serial Number: {{instrumentSerial}}</h2>
+        <h2>Instrument Details: {{instrumentDetails}}</h2>
+
+        <h3>Master Instrument Details</h3>
+        <p>Master Model: {{masterModel}}</p>
+        <p>Last Calibration Date: {{masterCalDate}}</p>
+        <p>Master Make: {{masterMake}}</p>
+        <p>Master Range: {{masterRange}}</p>
+
+        <h3>Instrument Details</h3>
+        <p>Instrument Model: {{instrumentModel}}</p>
+        <p>Instrument Calibration Date: {{instrumentDate}}</p>
+        <p>Instrument Make: {{instrumentMake}}</p>
+        <p>Instrument Range: {{instrumentRange}}</p>
+
+        <h3>Calibration Results</h3>
+
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>UP Reading</th>
+                    <th>Down Reading</th>
+                    <th>Accuracy (%)</th>
+                    <th>Output (mA)</th>
+                    <th>Remark</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{calibration_results}} <!-- Placeholder for dynamic calibration results -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
